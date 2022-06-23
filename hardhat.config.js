@@ -17,5 +17,12 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  solidity: "0.8.4",
-};
+    solidity: "0.7.3",
+      networks: {
+            maticm: {
+                  url: `https://rpc-mumbai.matic.today`,
+                  accounts: [`initial gain arrow whale orphan escape scale blast prison genius space panther`]
+            }
+          }
+        };
+  
