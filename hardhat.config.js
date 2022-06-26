@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
+const m = process.env.m;
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -18,11 +19,13 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
     solidity: "0.7.3",
-      networks: {
-            maticm: {
-                  url: `https://rpc-mumbai.matic.today`,
-                  accounts: [`initial gain arrow whale orphan escape scale blast prison genius space panther`]
-            }
-          }
-        };
+    networks: {
+ 
+       Mumbai: {
+         url: "https://rpc-mumbai.maticvigil.com",
+        accounts: m
+         }
+    }
+  };
+
   
